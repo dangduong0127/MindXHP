@@ -30,7 +30,7 @@ header {
     right: 0;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 2;
 }
 
 .brand {
@@ -62,16 +62,60 @@ nav {
     font-size: 18px;
 }
 
+.btn_nav_item {
+    margin-left: 10px;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #C10F15;
+    background-color: #C10F15;
+    border-radius: 7px;
+}
+
+.btn_nav_item:hover {
+    background-color: #F8F8F8;
+    color: #C10F15;
+    border: 1px solid #C10F15;
+    cursor: pointer;
+}
+
 .nav_item:hover {
     background-color: rgb(228, 228, 228);
     border-radius: 10px;
     text-decoration: none;
-    color: black;
+    transition: 0.5s;
+    color: #C10F15;
 }
 
 .dropdown {
     top: 2px;
     left: 4px;
+}
+
+.submenu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    background-color: #fff;
+    width: 460px;
+    z-index: 99;
+    border: 1px solid #F8F8F8;
+}
+
+.submenu-item {
+    display: block;
+    text-decoration: none;
+    color: #696969;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.submenu-item:hover {
+    background-color: rgb(228, 228, 228);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.5s;
+    color: #C10F15;
 }
 
 /* arrow */
