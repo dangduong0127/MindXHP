@@ -1,0 +1,152 @@
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  /* Navbar */
+  .container {
+    width: 100%;
+  }
+  .hd_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hd_container > nav {
+    display: none;
+  }
+
+  .nav-bar-btn {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .card_header_item {
+    display: block;
+  }
+
+  .carousel {
+    width: 90%;
+  }
+
+  .card_header_item {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    margin-top: auto;
+    width: 50%;
+  }
+
+  .article-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+  }
+
+  /* course */
+  .course {
+    padding: 20px 60px 20px 60px;
+    background-size: 100%;
+    background-size: cover;
+  }
+  .course2 {
+    padding: 20px 60px 20px 60px;
+  }
+
+  .course-container > .container > .content {
+    width: 100%;
+  }
+  .course-container > .container > .img_course {
+    width: 100%;
+    margin: 20px;
+  }
+  .course-container > .container > .img_course > img {
+    object-fit: cover;
+  }
+  .footer-coppyright > .container {
+    flex-wrap: wrap;
+  }
+
+  /* .article */
+
+  .article-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  .article-inner > iframe {
+    height: 350px;
+    width: 100%;
+  }
+
+  /* branding */
+  .slide-logos-container > .container > .heading-logos {
+    text-justify: center;
+    padding-left: 20px;
+  }
+  .slide-logos-container
+    > .container
+    > .heading-logos
+    > .heading-logos-inner
+    > .hd-2 {
+    width: 100%;
+  }
+
+  .slide-logos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 40px;
+  }
+  .slide-logos-container > .container {
+    /* width: 400px; */
+    height: auto;
+    padding: 0;
+  }
+
+  /* Footer */
+  footer {
+    text-justify: center;
+  }
+  .wrapper > .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .footer-coppyright > .container > .orderlast {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+  }
+
+  /* Outstanding student */
+  .outstanding-student {
+    padding: 30px 20px 30px 20px;
+    height: auto;
+  }
+  /* Feedback  */
+  .feedback {
+    color: #fff;
+    padding: 30px 0px 30px 0px;
+    height: 100%;
+  }
+  .feedback-content {
+    display: grid;
+    grid-template-columns: auto;
+    text-justify: center;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+  .feedback-content > iframe {
+    margin: auto;
+  }
+
+  #button {
+    right: 10px;
+  }
+}
