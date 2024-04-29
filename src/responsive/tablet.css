@@ -129,6 +129,10 @@
     padding: 30px 20px 30px 20px;
     height: auto;
   }
+  .outstanding-student > .students {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
   /* Feedback  */
   .feedback {
     color: #fff;

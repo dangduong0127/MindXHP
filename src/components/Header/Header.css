@@ -14,11 +14,15 @@ header {
 .brand {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
 }
-
+.brand:hover {
+  background: #ccc;
+}
 .brand > a > img {
-  margin-left: 10px;
+  /* margin-left: 10px; */
   width: 100px;
   /* margin: 18px; */
 }

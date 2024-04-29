@@ -24,7 +24,8 @@ body {
 }
 .hd_container {
   display: flex;
-  width: 1170px;
+  /* width: 1170px; */
+  padding: 0;
   justify-content: space-between;
   transition: all 0.3s ease 0s;
 }
@@ -42,18 +43,6 @@ header {
   z-index: 2;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  /* padding: 15px; */
-}
-
-.brand > a > img {
-  margin-left: 10px;
-  width: 100px;
-  /* margin: 18px; */
-}
-
 nav {
   display: flex;
   align-items: center;
@@ -66,7 +55,7 @@ nav {
   background-color: #fff;
   transition: transform 0.3s ease;
   padding: 10px;
-  z-index: 1;
+  z-index: 2;
 }
 .navbar-wrapper.moved {
   transform: translateY(-100%);
@@ -334,7 +323,9 @@ nav {
   border-radius: 24px;
   font-weight: 600;
 }
-
+.course_item > .btn-course:hover {
+  background-color: #a11e22;
+}
 /* End of CSS for Course */
 .article {
   display: grid;
@@ -504,6 +495,7 @@ nav {
   border: none;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 .btn-more:hover {
   background-color: #ccc;
@@ -512,7 +504,7 @@ nav {
 /* Css for Feedback */
 .feedback {
   color: #fff;
-  padding: 30px 0px 30px 0px;
+  padding: 40px 0px 40px 0px;
   height: 100%;
 }
 .feedback-content {

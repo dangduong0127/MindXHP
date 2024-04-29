@@ -3,11 +3,13 @@
 const navMenu = [
   {
     name: "Trang chủ",
+    href: "./index.html",
     submenu: [],
   },
 
   {
     name: "Khóa học",
+    href: "#",
     submenu: [
       {
         text: "Khoá học Robotics (6-12 tuổi)",
@@ -20,6 +22,7 @@ const navMenu = [
 
   {
     name: "Tin tức",
+    href: "#tintuc",
     submenu: [
       {
         text: "Tin tuc 1",
@@ -34,10 +37,17 @@ const navMenu = [
 
   {
     name: "Sự kiện",
-    submenu: [],
+    href: "#",
+    submenu: [
+      {
+        text: "Sự kiện Xcontest",
+        href: "#xcontest",
+      },
+    ],
   },
   {
     name: "Về chúng tôi",
+    href: "#",
     submenu: [],
   },
 ];
@@ -53,7 +63,7 @@ importCSS("../src/components/Header/Header.css");
 function renderHeader() {
   const header = document.createElement("header");
   header.innerHTML = `
-        <div class="hd_container">
+        <div class="hd_container container">
           <div class="brand">
             <a href="./index.html">
               <img src="../src/assets/logo-mindx-hai-phong-dao-tao-cong-nghe-lap-trinh-robotics-hai-phong.png" alt="">
@@ -80,7 +90,7 @@ const navEl = document.querySelector("nav");
 navMenu.forEach((item, index) => {
   const link = document.createElement("a");
   link.classList.add("nav_item");
-  link.href = "#";
+  link.href = `${item.href}`;
   link.textContent = item.name;
   navEl.appendChild(link);
 
@@ -132,17 +142,72 @@ nav_item.forEach((items, index) => {
 
 function renderNavbar() {
   const navbarEl = document.getElementById("navBar");
-  navMenu.forEach((doc) => console.log(doc));
 
   navbarEl.innerHTML = `
   <div class="navbar-inner">
   </div>
   `;
   const navbarinnerEl = document.querySelector(".navbar-inner");
+  const submenu = [];
   navMenu.forEach((items, index) => {
     navbarinnerEl.innerHTML += `
-    <a href="" class="nav_item">${items.name} </a>
+    <a href="${items.href}" class="nav_item">${items.name} 
+    <ul
+    class="submenu_${index} submenu_display hide"
+    style="list-style: none; padding: 10px; border-radius: 7px"
+  >
+  </ul>
+    </a>
     `;
+    submenu.push(items.submenu);
+  });
+
+  submenu.forEach((item, i) => {
+    const ulElement = document.querySelector(`.submenu_${i}`);
+    console.log(item);
+    item.forEach((doc) => {
+      if (doc != []) {
+        ulElement.innerHTML += `
+    <li>
+      <a href="${doc.href}" class="submenu-item">${doc.text}</a>
+    </li>
+    `;
+      }
+    });
   });
 }
 renderNavbar();
+
+const barBtn = document.querySelector(".nav-bar-btn");
+
+barBtn.addEventListener("click", function () {
+  const navBarEl = document.querySelector(".navbar-wrapper");
+  const headerEl = document.querySelector("header");
+  if (!navBarEl.classList.contains("moved")) {
+    navBarEl.classList.add("moved");
+    headerEl.style.boxShadow = "2px 2px 20px";
+    headerEl.style.borderBottom = "none";
+  } else {
+    navBarEl.classList.remove("moved");
+    headerEl.style.boxShadow = "none";
+    headerEl.style.borderBottom = "1px solid #ccc";
+    const nav_item = document.querySelectorAll(".nav_item");
+    nav_item.forEach((items, index) => {
+      const ulElement = document.querySelector(`.submenu_${index}`);
+      if (ulElement !== null) {
+        items.addEventListener("click", function () {
+          if (ulElement.classList.contains("hide")) {
+            if (ulElement.childElementCount > 0) {
+              ulElement.classList.remove("hide");
+              ulElement.classList.remove("submenu_display");
+              ulElement.style.margin = "0px";
+              ulElement.style.padding = "0px";
+            }
+          } else {
+            ulElement.classList.add("hide");
+          }
+        });
+      }
+    });
+  }
+});

@@ -58,19 +58,3 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-const barBtn = document.querySelector(".nav-bar-btn");
-
-barBtn.addEventListener("click", function () {
-  const navBarEl = document.querySelector(".navbar-wrapper");
-  const headerEl = document.querySelector("header");
-  if (!navBarEl.classList.contains("moved")) {
-    navBarEl.classList.add("moved");
-    headerEl.style.boxShadow = "2px 2px 20px";
-    headerEl.style.borderBottom = "none";
-  } else {
-    navBarEl.classList.remove("moved");
-    headerEl.style.boxShadow = "none";
-    headerEl.style.borderBottom = "1px solid #ccc";
-  }
-});

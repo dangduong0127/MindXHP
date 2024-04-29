@@ -6,6 +6,7 @@
   }
   .container {
     width: 100vw;
+    margin-right: 0px;
   }
   .hd_container {
     width: 100%;
@@ -66,6 +67,7 @@
   }
   .course-container > .container {
     display: block;
+    text-align: justify;
     /* grid-template-columns: 100%;
     justify-content: center; */
   }
@@ -80,6 +82,7 @@
   .course_heading {
     display: flex;
     align-content: center;
+    text-align: justify;
   }
   .course_heading > h1 {
     font-weight: bolder;
@@ -148,15 +151,15 @@
   }
   .footer-coppyright > .container > .orderlast {
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 20px;
     margin-bottom: 20px;
   }
   .footer-coppyright > .container > .map {
     /* width: 500px; */
-    margin: 0;
-    float: left;
+    display: grid;
+    grid-template-columns: auto;
+    margin: auto;
     justify-content: center;
-    text-align: center;
   }
   .footer-coppyright > .container > .map > iframe {
     width: 100%;
@@ -164,7 +167,7 @@
 
   /* Outstanding student */
   .outstanding-student {
-    padding: 0px 10px 0px 10px;
+    padding: 20px 10px 20px 10px;
     height: auto;
   }
   .outstanding-student > .container {
@@ -178,29 +181,26 @@
   /* Feedback  */
   .feedback {
     color: #fff;
-    /* padding: 20px 0px 20px 0px; */
     height: 100%;
   }
   .feedback > .container {
     width: 100vw;
-    /* margin: 0; */
-    /* padding: 0; */
+    margin: 0;
   }
   .feedback > .container > .feedback-content {
     width: 100%;
+    margin: 0px;
+    padding: 0px;
   }
   .feedback-content {
     width: 100%;
-    display: grid;
-    grid-template-columns: auto;
-    text-justify: center;
-    justify-content: center;
+    display: block;
   }
   .feedback-content > p {
-    width: 90%;
+    width: 95%;
   }
   .feedback-content > iframe {
-    width: 90%;
+    width: 95%;
     margin: auto;
   }
 
