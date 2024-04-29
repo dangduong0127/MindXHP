@@ -15,7 +15,7 @@ header {
   display: flex;
   align-items: center;
   padding: 10px;
-  margin: 5px;
+  margin: 5px 0px 5px 0px;
   border-radius: 10px;
 }
 .brand:hover {
@@ -74,9 +74,7 @@ nav {
   top: 2px;
   left: 4px;
 }
-.hide {
-  display: none;
-}
+
 .submenu_display {
   position: absolute;
   top: 65px;
