@@ -204,6 +204,65 @@
     margin: auto;
   }
 
+  /* <!-- ladi --> */
+  .ladi-container > .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .ladi-item {
+    padding: 5px 0px 5px 0px;
+  }
+
+  /* Css section tong quan */
+  .sectionTongQuan {
+    padding: 20px 0px 20px 0px;
+  }
+
+  .tongquan-ladi {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .img-tongquan > img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Css for reason section */
+
+  .reason-content-wapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+  }
+
+  .reason-content > p {
+    text-align: justify;
+  }
+  .reason-content > img {
+    object-fit: cover;
+    height: 180px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  /* Css for suitable section */
+  .suitable-content-wrapper {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  /* css for program section */
+  .tongquan {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .pagragh {
+    width: 100%;
+  }
+  .wapper-program-routemap {
+    width: 100%;
+  }
   #myBtn {
     right: 5px;
   }

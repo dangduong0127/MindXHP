@@ -33,6 +33,7 @@ body {
   display: none;
 }
 .container {
+  /* padding: 0; */
   display: flex;
   max-width: 1120px;
 }
@@ -533,6 +534,7 @@ nav {
   width: 500px;
   height: 300px;
 }
+
 /* Scrool to top */
 #myBtn {
   display: none; /* Hidden by default */

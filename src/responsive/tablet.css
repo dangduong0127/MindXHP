@@ -136,7 +136,7 @@
   /* Feedback  */
   .feedback {
     color: #fff;
-    padding: 30px 0px 30px 0px;
+    padding: 30px 20px 30px 20px;
     height: 100%;
   }
   .feedback-content {
@@ -148,6 +148,45 @@
   }
   .feedback-content > iframe {
     margin: auto;
+  }
+
+  /* <!-- ladi --> */
+
+  .ladi-item {
+    padding: auto;
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 0px auto;
+  }
+  .ladi-item:hover {
+    text-decoration: none;
+    color: #000;
+  }
+
+  /* Css section tong quan */
+  .sectionTongQuan {
+    padding: 30px 0px 30px 0px;
+  }
+
+  .tongquan-ladi {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .img-tongquan > img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Css for reason section */
+
+  .reason-content-wapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
   }
 
   #button {
