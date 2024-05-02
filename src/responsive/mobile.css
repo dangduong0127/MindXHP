@@ -45,7 +45,12 @@
   .carousel {
     width: 90%;
   }
-
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: fit-content;
+    top: 50%;
+  }
   .card_header_item {
     display: grid;
     grid-template-columns: auto;
@@ -263,6 +268,77 @@
   .wapper-program-routemap {
     width: 100%;
   }
+  .program-heading-inner > h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  .program-heading-inner > i {
+    font-size: 15px;
+  }
+  .sub-program {
+    padding: 10px;
+    text-align: justify;
+    z-index: 0;
+  }
+  .sub-program > ul {
+    padding-left: 10px;
+  }
+  /* <!-- highlight section --> */
+
+  .highlight-content {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .highlight-content > ul {
+    margin: 0;
+    padding: 0;
+  }
+  .highlight-content > .corporate-video {
+    width: 100%;
+    height: 230px;
+    /* object-fit: cover; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .corporate-video > iframe {
+    top: 20px;
+    left: 40px;
+    height: 180px;
+    width: 265px;
+  }
+
+  /* css for mentor */
+
+  .mentor-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+  }
+  /* css for signUp section */
+  .SignUpSection {
+    padding: 0;
+  }
+  .SignUpSection > .container {
+    padding: 0;
+    margin: 0;
+    height: 350px;
+  }
+  .SignUpSection > .container > form {
+    right: 20px;
+    top: 40%;
+  }
+
+  .SignUpSection > .container > form > input {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    height: auto;
+    padding: 5px;
+    width: 180px;
+    border: none;
+  }
+
   #myBtn {
     right: 5px;
   }

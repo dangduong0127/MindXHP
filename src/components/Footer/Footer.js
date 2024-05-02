@@ -4,7 +4,7 @@ function importCSS(url) {
   link.href = url;
   document.head.appendChild(link);
 }
-importCSS("../src/components/Footer/Footer.css");
+importCSS("src/components/Footer/Footer.css");
 
 function renderFooter() {
   const footer = document.createElement("footer");
@@ -15,38 +15,38 @@ function renderFooter() {
         <div class="branding">
         <div class="branding-inner">
             <img
-            src="../src/assets/logo-mindx-hai-phong-dao-tao-cong-nghe-lap-trinh-robotics-hai-phong.png"
+            src="src/assets/logo-mindx-hai-phong-dao-tao-cong-nghe-lap-trinh-robotics-hai-phong.png"
             alt=""
             width="70%"
             />
             <div class="branding-contact">
             <a href="https://www.facebook.com/mindxschool"
                 ><img
-                src="../src/assets/icons/facebook.svg"
+                src="src/assets/icons/facebook.svg"
                 alt="facebook"
                 width="32"
                 height="32" /></a
             ><a href="https://www.youtube.com/@mindxtechnologyschool9210"
                 ><img
-                src="../src/assets/icons/youtube.svg"
+                src="src/assets/icons/youtube.svg"
                 alt="youtube"
                 width="32"
                 height="32" /></a
             ><a href="https://www.linkedin.com/company/mindxtechnologyschool/"
                 ><img
-                src="../src/assets/icons/linkedin.svg"
+                src="src/assets/icons/linkedin.svg"
                 alt="linkedin"
                 width="32"
                 height="32" /></a
             ><a href="https://www.instagram.com/mindx.technology.school/"
                 ><img
-                src="../src/assets/icons/instagram.svg"
+                src="src/assets/icons/instagram.svg"
                 alt="instagram"
                 width="32"
                 height="32" /></a
             ><a href=" https://www.tiktok.com/@mindxschool"
                 ><img
-                src="../src/assets/icons/tiktok.svg"
+                src="src/assets/icons/tiktok.svg"
                 alt="tiktok"
                 width="32"
                 height="32"
@@ -57,7 +57,7 @@ function renderFooter() {
             class="gov-certificate w-[112px] md:w-[80px]"
             width="80"
             height="30"
-            src="../src/assets/gov-certificate.png"
+            src="src/assets/gov-certificate.png"
             alt="Đã thông báo Bộ Công Thương"
         />
         </div>

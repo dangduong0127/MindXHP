@@ -1,6 +1,6 @@
 "use strict";
 import { courses, navMenu } from "../../utils/data.js";
-importCSS("../src/components/Header/Header.css");
+importCSS("src/components/Header/Header.css");
 
 // Đặt các hàm và biến cần xuất ở đây
 // document.addEventListener("DOMContentLoaded", function () {
@@ -18,7 +18,7 @@ function renderHeader() {
           <div class="hd_container container">
             <div class="brand">
               <a href="./index.html">
-                <img src="../src/assets/logo-mindx-hai-phong-dao-tao-cong-nghe-lap-trinh-robotics-hai-phong.png" alt="">
+                <img src="src/assets/logo-mindx-hai-phong-dao-tao-cong-nghe-lap-trinh-robotics-hai-phong.png" alt="">
               </a>
             </div>
             <nav></nav>

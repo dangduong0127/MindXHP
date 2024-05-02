@@ -179,7 +179,13 @@
     width: 100%;
     border-radius: 10px;
   }
-
+  /* css for programs */
+  .pagragh {
+    width: 90%;
+  }
+  .wapper-program-routemap {
+    width: 90%;
+  }
   /* Css for reason section */
 
   .reason-content-wapper {
@@ -187,6 +193,37 @@
     justify-content: center;
     grid-template-columns: auto auto;
     grid-gap: 20px;
+  }
+  /* <!-- highlight section --> */
+  .highlight > .container {
+    justify-content: center;
+  }
+
+  .highlight-content {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .highlight-content > ul {
+    margin: 0;
+    padding: 0;
+  }
+  .highlight-content > .corporate-video {
+    margin: auto;
+  }
+
+  /* css for mentor */
+  .mentor > .container {
+    padding: 0px 60px 0px 60px;
+  }
+  .mentor-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 70px;
+  }
+  /* css for signup section */
+  .SignUpSection > .container > form {
+    right: 70px;
+    top: 40%;
   }
 
   #button {

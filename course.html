@@ -24,11 +24,11 @@
       src="https://kit.fontawesome.com/98638255fc.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../src/utils/linkcdn.css" />
-    <link rel="stylesheet" href="../src/css/global.css" />
-    <link rel="stylesheet" href="../src/css/course.css" />
-    <link rel="stylesheet" href="../src/responsive/tablet.css" />
-    <link rel="stylesheet" href="../src/responsive/mobile.css" />
+    <link rel="stylesheet" href="src/utils/linkcdn.css" />
+    <link rel="stylesheet" href="src/css/global.css" />
+    <link rel="stylesheet" href="src/css/course.css" />
+    <link rel="stylesheet" href="src/responsive/tablet.css" />
+    <link rel="stylesheet" href="src/responsive/mobile.css" />
   </head>
   <body>
     <div id="loading-screen">
@@ -36,7 +36,7 @@
     </div>
 
     <div id="navBar" class="navbar-wrapper moved"></div>
-    <script type="module" src="../src/components/Header/Header.js"></script>
+    <script type="module" src="src/components/Header/Header.js"></script>
     <button onclick="topFunction()" id="myBtn" title="Go to top">
       <i class="fa-solid fa-arrow-up" style="color: #ffffff"></i>
     </button>
@@ -45,7 +45,7 @@
     <div class="banner">
       <div class="container">
         <img
-          src="../src/assets/banner-web-rbt2x-20240223021310-0amv7.png"
+          src="src/assets/banner-web-rbt2x-20240223021310-0amv7.png"
           alt=""
         />
       </div>
@@ -54,15 +54,15 @@
     <!-- ladi -->
     <div class="ladi-container">
       <div class="container">
-        <a class="ladi-item" href="#highLight">Điểm nổi bật của MindX</a>
+        <a class="ladi-item" href="#highlight">Điểm nổi bật của MindX</a>
         <a class="ladi-item" href="#program">Lộ trình học</a>
         <a class="ladi-item" href="#result"
           >Sau khóa học, con sẽ nhận được gì?</a
         >
         <a class="ladi-item" href="#suitable">Khóa học dành cho ai</a>
         <a class="ladi-item" href="#reason">Tại sao lựa chọn khóa học này</a>
-        <a class="ladi-item" href="#">Đội ngũ cố vấn</a>
-        <a class="ladi-item" href="#">Sản phẩm học viên</a>
+        <a class="ladi-item" href="#mentor">Đội ngũ cố vấn</a>
+        <a class="ladi-item" href="#products">Sản phẩm học viên</a>
       </div>
     </div>
 
@@ -107,7 +107,7 @@
 
           <div class="img-tongquan">
             <img
-              src="../src/assets/photo_6302938157435435116_y-20240220095030-vn4pi.jpg"
+              src="src/assets/photo_6302938157435435116_y-20240220095030-vn4pi.jpg"
               alt=""
             />
           </div>
@@ -133,7 +133,7 @@
         <div class="reason-content-wapper">
           <div class="reason-content">
             <img
-              src="../src/assets/img_9363_1_b462d92633-20240223041300-bc8f7.jpg"
+              src="src/assets/img_9363_1_b462d92633-20240223041300-bc8f7.jpg"
               alt=""
             />
             <h3>Môi trường giáo dục STEAM</h3>
@@ -148,7 +148,7 @@
 
           <div class="reason-content">
             <img
-              src="../src/assets/4abdbfbc_576c_42ea_b076_342645476ca9_8f185bc15a-20240223074248-_vk_q.jpg"
+              src="src/assets/4abdbfbc_576c_42ea_b076_342645476ca9_8f185bc15a-20240223074248-_vk_q.jpg"
               alt=""
             />
             <h3>Kích thích phát triển bộ kỹ năng 5Cs</h3>
@@ -164,7 +164,7 @@
 
           <div class="reason-content">
             <img
-              src="../src/assets/photo_6302938157435435112_y_2_c5d87cf697-20240223041341-kddea.jpg"
+              src="src/assets/photo_6302938157435435112_y_2_c5d87cf697-20240223041341-kddea.jpg"
               alt=""
             />
             <h3>Sử dụng giáo trình chuẩn đầu ra Mỹ</h3>
@@ -178,7 +178,7 @@
 
           <div class="reason-content">
             <img
-              src="../src/assets/52859633356_9c7332ca5d_k_0d1d5f37bc-20240223041503-uyxro.jpg"
+              src="src/assets/52859633356_9c7332ca5d_k_0d1d5f37bc-20240223041503-uyxro.jpg"
               alt=""
             />
             <h3>
@@ -238,7 +238,7 @@
 
       <div class="container">
         <div class="suitable-content-signup">
-          <button id="btnSignUpNow">Đăng ký ngay</button>
+          <button id="btnSignUpNow" onclick="signUp()">Đăng ký ngay</button>
         </div>
       </div>
 
@@ -246,7 +246,7 @@
         <div class="end-suitable-heading" id="result">
           <h2>Sau khóa học này con sẽ nhận được gì?</h2>
           <img
-            src="../src/assets/web_robotic_3_a56a003771-20240221091242-h4zx2.png"
+            src="src/assets/web_robotic_3_a56a003771-20240221091242-h4zx2.png"
             alt=""
           />
         </div>
@@ -279,36 +279,13 @@
 
       <div class="container">
         <div class="wapper-program-routemap">
-          <div class="program-inner">
-            <h3>Năm 1: Nhập môn robitics</h3>
-            <i class="fa-solid fa-plus"></i>
-          </div>
-
-          <div class="program-inner">
-            <h3>Năm 2: Nhập môn robitics</h3>
-            <i class="fa-solid fa-plus"></i>
-          </div>
-
-          <div class="program-inner">
-            <h3>Năm 3: Nhập môn robitics</h3>
-            <i class="fa-solid fa-plus"></i>
-          </div>
-
-          <div class="program-inner">
-            <h3>Năm 4: Nhập môn robitics</h3>
-            <i class="fa-solid fa-plus"></i>
-          </div>
-
-          <div class="program-inner">
-            <h3>Năm 5: Nhập môn robitics</h3>
-            <i class="fa-solid fa-plus"></i>
-          </div>
+          <div class="program-inner"></div>
         </div>
       </div>
     </div>
 
     <!-- highlight section -->
-    <div class="highlight">
+    <div class="highlight" id="highlight">
       <div class="container">
         <div class="hightlight-heading">
           <h2>điểm nổi bật của MindX</h2>
@@ -319,22 +296,31 @@
         <div class="highlight-content">
           <ul>
             <li>
-              Trường học Công nghệ quy mô lớn nhất Đông Nam Á: Nhằm thực hiện sứ
-              mệnh đem đến cuộc sống tốt đẹp hơn cho các em nhỏ tại Việt Nam
-              bằng sức mạnh công nghệ, MindX đến nay đã có gần 40 cơ sở trên
-              toàn quốc và đào tạo hơn 35.000 học viên.
+              <i class="fa-solid fa-square"></i>
+              <span style="font-weight: 700"
+                >Trường học Công nghệ quy mô lớn nhất Đông Nam Á:</span
+              >
+              Nhằm thực hiện sứ mệnh đem đến cuộc sống tốt đẹp hơn cho các em
+              nhỏ tại Việt Nam bằng sức mạnh công nghệ, MindX đến nay đã có gần
+              40 cơ sở trên toàn quốc và đào tạo hơn 35.000 học viên.
             </li>
             <li>
-              Phát triển kỹ năng mềm: Không chỉ giảng dạy kiến thức từ cơ bản
-              đến chuyên sâu về công nghệ, MindX lồng ghép việc phát triển các
-              kỹ năng mềm quan trọng khác như: làm việc nhóm, thuyết trình -
-              phản biện, kỹ năng giải quyết vấn đề,..
+              <i class="fa-solid fa-square"></i>
+              <span style="font-weight: 700">Phát triển kỹ năng mềm:</span>
+              Không chỉ giảng dạy kiến thức từ cơ bản đến chuyên sâu về công
+              nghệ, MindX lồng ghép việc phát triển các kỹ năng mềm quan trọng
+              khác như: làm việc nhóm, thuyết trình - phản biện, kỹ năng giải
+              quyết vấn đề,..
             </li>
             <li>
-              Cơ hội thực tập sớm, thành công sớm: Trong quá trình học, học viên
-              được vận dụng các kiến thức công nghệ và kỹ năng mềm của mình để
-              tham gia vào các dự án thực tế, được cọ xát, phát triển vượt bậc
-              và làm quen với thế giới văn phòng nhiều thú vị.
+              <i class="fa-solid fa-square"></i>
+              <span style="font-weight: 700"
+                >Cơ hội thực tập sớm, thành công sớm:</span
+              >
+              Trong quá trình học, học viên được vận dụng các kiến thức công
+              nghệ và kỹ năng mềm của mình để tham gia vào các dự án thực tế,
+              được cọ xát, phát triển vượt bậc và làm quen với thế giới văn
+              phòng nhiều thú vị.
             </li>
           </ul>
 
@@ -358,7 +344,109 @@
       </div>
     </div>
 
-    <script src="../src/components/Footer/Footer.js"></script>
-    <script src="../src/utils/course.js"></script>
+    <!-- product of students -->
+    <div class="products" id="products">
+      <div class="container">
+        <div class="products-heading">
+          <h2>Sản phẩm của học viên</h2>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="">
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/koWIg924kp4?si=ajb_9JdhaAnj0Dx_"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe
+                src="https://www.youtube.com/embed/uWw6RYLNf88?si=HFe6DkLT2uwCHxwO"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          <h3>(Bản quyền thuộc trường công nghệ MindX)</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- mentor section -->
+    <div class="mentor" id="mentor">
+      <div class="container">
+        <div class="mentor-heading"><h2>Đội ngũ cố vấn</h2></div>
+      </div>
+
+      <div class="container">
+        <div class="mentor-wrapper">
+          <div class="mentor-content">
+            <img src="src/assets/group-329-20240227024707-6_cjn.png" alt="" />
+          </div>
+
+          <div class="mentor-content">
+            <img src="src/assets/group-305-20240227024707-ckhrh.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- form đăng ký trải nghiệm -->
+    <div class="SignUpSection" id="SignUpSection">
+      <div class="container">
+        <form>
+          <input type="text" placeholder="Tên phụ huynh" />
+          <input type="tel" placeholder="Số điện thoại" />
+          <input type="text" placeholder="Tên học viên tham gia trải nghiệm" />
+          <input type="text" placeholder="Địa chỉ" />
+          <input class="btnSignUpnow" type="button" value="Đăng ký ngay" />
+        </form>
+      </div>
+    </div>
+    <script src="src/components/Footer/Footer.js"></script>
+    <script src="src/utils/course.js"></script>
   </body>
 </html>
