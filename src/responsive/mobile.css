@@ -338,7 +338,37 @@
     width: 180px;
     border: none;
   }
+  /* reason section of Gamemaker */
+  .reason-content {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+  .img-reason {
+    width: 100%;
+  }
 
+  /* suitable section of Game Maker */
+  .suitable-content {
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+  }
+  .suitable-inner {
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* highlight section of Gamemaker */
+  .highlight-wrapper {
+    display: block;
+  }
+  .highlight-img {
+    margin: auto;
+  }
+
+  /* program for Game Maker page */
+  .program > .container {
+    padding: 0px 10px 0px 10px;
+  }
   #myBtn {
     right: 5px;
   }

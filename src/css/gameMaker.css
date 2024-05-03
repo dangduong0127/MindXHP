@@ -1,0 +1,281 @@
+/* banner section */
+.banner {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+.banner > .container {
+  padding: 0;
+  background-image: url("../assets/bg-banner-web-coding-1-20240314105120-7pgl6.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.banner > .container > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* <!-- ladi --> */
+.ladi-container {
+  text-align: center;
+  background: #f8f8f8;
+}
+.ladi-container > .container {
+  padding: 0;
+}
+.ladi-item {
+  margin: 10px;
+  padding: 10px;
+  display: block;
+  color: black;
+  text-decoration: none;
+  border-radius: 7px;
+  /* margin: 0px auto; */
+}
+.ladi-item:hover {
+  text-decoration: none;
+  color: #000;
+  background-color: #ccc;
+}
+
+/* reason  */
+.reason > .container {
+  /* flex-direction: column; */
+  justify-content: center;
+  display: grid;
+}
+.reason {
+  padding: 30px 0px 30px 0px;
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.reason-content {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  grid-gap: 30px;
+}
+.img-reason {
+  width: 300px;
+}
+.img-reason > img {
+  width: 100%;
+}
+
+/* suitable section */
+.suitable {
+  padding: 30px 0px 30px 0px;
+}
+.suitable > .container {
+  justify-content: center;
+}
+.suitable-content {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 80px;
+}
+.suitable-inner {
+  padding: 20 40px 20px 40px;
+  text-align: center;
+}
+.suitable-inner > img {
+  width: 73.35px;
+}
+.btnSignUpWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* hightlight section */
+.highlight {
+  padding: 30px 0px 30px 0px;
+  background: #f8f8f8;
+}
+
+.highlight-wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  grid-gap: 150px;
+}
+.highlight-content > ul li {
+  margin-bottom: 50px;
+}
+.highlight-content > ul li::marker {
+  color: red;
+}
+.highlight-content > ul li > h4 {
+  font-weight: bold;
+  font-size: 18px;
+}
+.highlight-content > ul li > p {
+  text-align: justify;
+  font-size: 15px;
+  margin-left: 20px;
+}
+.highlight-img {
+  width: 300px;
+}
+.highlight-img > img {
+  width: 100%;
+}
+
+/* css for program section */
+.program {
+  padding: 30px 0px 30px 0px;
+  /* background: #f8f8f8; */
+}
+.program > .container {
+  justify-content: center;
+  padding: 0px 100px 0px 100px;
+}
+.program-heading {
+  background-image: linear-gradient(rgb(255, 65, 108), rgb(255, 75, 43));
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 2;
+}
+.program-heading > h2 {
+  margin: 0;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #fff;
+  font-weight: bolder;
+  text-align: center;
+}
+.tongquan {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+.tongquan > h3 {
+  margin: 0;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.tongquan > i {
+  font-size: 25px;
+  color: #e31f26;
+}
+
+.pagragh {
+  text-align: justify;
+  width: 100%;
+  background: #f8f8f8;
+}
+.pagragh {
+  font-size: 15px;
+  margin: 0;
+  padding: 20px;
+}
+.wapper-program-routemap {
+  margin-top: 20px;
+  width: 100%;
+}
+.program-heading-inner {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px 10px 40px;
+  align-items: center;
+  background: #2c2b2b;
+  color: #fff;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+.program-heading-inner > h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.program-heading-inner > i {
+  font-size: 20px;
+}
+.sub-program {
+  background: #f8f8f8;
+  padding: 30px;
+  text-align: justify;
+  z-index: 0;
+}
+
+.sub-program > h5 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #e31f26;
+}
+.sub-program > ul {
+  list-style-type: none;
+}
+.sub-program > ul li {
+  margin-bottom: 10px;
+}
+.sub-program > ul li > i {
+  color: #000;
+  font-size: 7px;
+  margin-right: 10px;
+}
+.sub-program > .btn {
+  display: flex;
+  justify-content: center;
+}
+.btn > .btnSignUp {
+  border: none;
+  padding: 5px 20px 5px 20px;
+  background: #e31f26;
+  color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* css for output */
+.output {
+  padding: 30px 0px 30px 0px;
+  background: #f8f8f8;
+}
+
+.carousel {
+  margin-top: 0px;
+  padding: 0px 50px 0px 50px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 150px;
+  height: fit-content;
+  top: 50%;
+}
+.carousel-inner {
+  border-radius: 20px;
+}
+.carousel-item {
+  height: auto;
+}
+.carousel-item > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* css for lecturer section */
+.lecturer {
+  padding: 30px 0px 30px 0px;
+}
+
+#btnSignUpNow {
+  cursor: pointer;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background: #e31f26;
+  padding: 5px 20px 5px 20px;
+  border-radius: 7px;
+}

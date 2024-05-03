@@ -225,7 +225,22 @@
     right: 70px;
     top: 40%;
   }
-
+  /* suitable section of GameMaker */
+  .suitable-content {
+    grid-gap: 10px;
+  }
+  .suitable-inner {
+    padding: 20px;
+    text-align: center;
+  }
+  /* highlight section of Gamemaker */
+  .highlight-wrapper {
+    grid-gap: 10px;
+  }
+  /* program for Game Maker page */
+  .program > .container {
+    padding: 0px 15px 0px 15px;
+  }
   #button {
     right: 10px;
   }

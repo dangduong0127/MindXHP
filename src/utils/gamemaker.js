@@ -1,6 +1,3 @@
-"use strict";
-import { routeMapData } from "./data.js";
-
 const ladiEl = document.querySelector(".ladi-container");
 
 // Get the button:
@@ -59,31 +56,27 @@ window.onscroll = function () {
 };
 
 // stop cacrousel products
-$(".carousel").carousel("pause");
-
-//programs
-
-const wapperProgramsEl = document.querySelector(".wapper-program-routemap");
-routeMapData.forEach((items) => {
-  wapperProgramsEl.innerHTML += `
-  <div class="program-heading-inner" onclick="showSubProgram('${items.id}')">
-      <h3>${items.title}</h3>
-      <i class="fa-solid fa-plus"></i>
-    </div>
-    <div id=${items.id} class="sub-program hide">
-      <h5>Tổng quan kỳ học:</h5>
-      <ul id="ul-${items.id}"></ul>
-      <div class="btn"><button class="btnSignUp" onclick="signUp()">Đăng ký học thử</button></div>
-    </div>
-  `;
-
-  const ulEL = document.querySelector(`#ul-${items.id}`);
-  items.detail.forEach((detail) => {
-    ulEL.innerHTML += `
-    <li>
-    <i class="fa-solid fa-square"></i>
-    ${detail}
-  </li>
-    `;
-  });
+// $(".carousel").carousel("pause");
+$(".carousel").carousel({
+  interval: 5000,
 });
+
+function showSubProgram(id) {
+  const showSubProgramEl = document.getElementById(id);
+  if (showSubProgramEl.classList.contains("hide")) {
+    showSubProgramEl.classList.remove("hide");
+    showSubProgramEl.style.transition = "1.3s";
+  } else {
+    showSubProgramEl.classList.add("hide");
+  }
+}
+
+function signUp() {
+  window.location.href = "#SignUpSection";
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
