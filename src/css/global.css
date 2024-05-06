@@ -166,7 +166,7 @@ nav {
   height: 100%;
 } */
 .carousel-indicators {
-  z-index: 2;
+  z-index: 1;
 }
 .carousel-item {
   height: 100%;

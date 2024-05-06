@@ -369,6 +369,48 @@
   .program > .container {
     padding: 0px 10px 0px 10px;
   }
+
+  /* css for Output section of GameMaker */
+  #carouselOutput {
+    margin: auto;
+    width: 100%;
+  }
+  #carouselOutput > .carousel-inner {
+    width: 100%;
+  }
+  .output > .container > .carousel {
+    padding: 0px;
+  }
+
+  #carouselOutput > .carousel-inner > .carousel-item > img {
+    width: 100%;
+  }
+  .output-btn {
+    position: absolute;
+    width: 20px !important;
+    height: auto;
+    top: 0;
+    bottom: 0;
+  }
+
+  /* css for mentor section */
+  .lecturer > .container > #carouselExampleIndicator {
+    width: 100%;
+    padding: 0;
+  }
+
+  #carouselExampleIndicator > .carousel-inner > .carousel-item > img {
+    width: 100%;
+  }
+
+  /* css for feedback section of GMaker */
+  .feedback-btn {
+    width: 20px !important;
+  }
+  #carouselFeedback > .carousel-inner > .carousel-item > iframe {
+    width: 100%;
+    height: 200px;
+  }
   #myBtn {
     right: 5px;
   }

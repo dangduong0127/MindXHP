@@ -137,7 +137,7 @@
     </div>
 
     <!-- suitable section -->
-    <div class="suitable">
+    <div class="suitable" id="suitable">
       <div class="container">
         <div class="course_heading">
           <div class="stick"></div>
@@ -267,7 +267,7 @@
     </div>
 
     <!-- program -->
-    <div class="program" id="program">
+    <div class="program" id="detail">
       <div class="container">
         <div class="program-heading">
           <h2>Lộ trình khóa học</h2>
@@ -323,7 +323,7 @@
     </div>
 
     <!-- output section -->
-    <div class="output">
+    <div class="output" id="products">
       <div class="container">
         <div class="course_heading">
           <div class="stick"></div>
@@ -332,7 +332,7 @@
       </div>
 
       <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="">
+        <div id="carouselOutput" class="carousel slide" data-ride="">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="./src/assets/DoDanhThanhJSA02.PNG" alt="" />
@@ -348,8 +348,8 @@
             </div>
           </div>
           <a
-            class="carousel-control-prev"
-            href="#carouselExampleIndicators"
+            class="carousel-control-prev output-btn"
+            href="#carouselOutput"
             role="button"
             data-slide="prev"
           >
@@ -357,8 +357,8 @@
             <span class="sr-only">Previous</span>
           </a>
           <a
-            class="carousel-control-next"
-            href="#carouselExampleIndicators"
+            class="carousel-control-next output-btn"
+            href="#carouselOutput"
             role="button"
             data-slide="next"
           >
@@ -370,7 +370,7 @@
     </div>
 
     <!-- lecturer, mentor -->
-    <div class="lecturer">
+    <div class="lecturer" id="mentor">
       <div class="container">
         <div class="course_heading">
           <div class="stick"></div>
@@ -382,16 +382,6 @@
 
       <div class="container">
         <div id="carouselExampleIndicator" class="carousel slide" data-ride="">
-          <ol class="carousel-indicators">
-            <li
-              data-target="#carouselExampleIndicator"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#carouselExampleIndicator" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicator" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicator" data-slide-to="3"></li>
-          </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
@@ -416,7 +406,7 @@
             </div>
           </div>
           <a
-            class="carousel-control-prev"
+            class="carousel-control-prev output-btn"
             href="#carouselExampleIndicator"
             role="button"
             data-slide="prev"
@@ -428,7 +418,7 @@
             ></i>
           </a>
           <a
-            class="carousel-control-next"
+            class="carousel-control-next output-btn"
             href="#carouselExampleIndicator"
             role="button"
             data-slide="next"
@@ -438,6 +428,72 @@
               class="fa-solid fa-chevron-right"
               style="font-size: 30px; color: black"
             ></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- feedback section -->
+    <div class="feedbackOfParent" id="feedback">
+      <div class="container">
+        <div class="course_heading">
+          <div class="stick"></div>
+          <h1 style="font-size: 30px">Phụ huynh nói gì về MindX</h1>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="carouselFeedback" class="carousel slide" data-ride="">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <iframe
+                src="https://www.youtube.com/embed/5wx3ojDEaLA?si=CUlAbPHEBd528G8B"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe
+                src="https://www.youtube.com/embed/jvtLmHZytXU?si=AGlHo--dgHOQ4-NS"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="carousel-item">
+              <iframe
+                src="https://www.youtube.com/embed/jNsd8IOGxZ4?si=rHALGYrty_dfIFUF"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev feedback-btn"
+            href="#carouselFeedback"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next feedback-btn"
+            href="#carouselFeedback"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
           </a>
         </div>
       </div>
