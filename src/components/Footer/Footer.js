@@ -9,6 +9,23 @@ importCSS("src/components/Footer/Footer.css");
 function renderFooter() {
   const footer = document.createElement("footer");
   footer.innerHTML = `
+    <div id="customAlert" class="custom-alert" style="display: none;">
+        <p>Đang xử lý, vui lòng đợi trong giây lát...</p>
+    </div>
+
+    <div class="bg-popup">
+        <div class="popup">
+            <i class="fa-regular fa-circle-xmark" onclick="btnPopup()"></i>
+            <form class="formPopup" name="submit-to-google-sheet">
+            <input type="text" name="parent" placeholder="Tên phụ huynh" />
+            <input type="tel" name="numberPhone" placeholder="Số điện thoại" />
+            <input type="text" name="student" placeholder="Tên học viên tham gia trải nghiệm" />
+            <input type="text" name="address" placeholder="Địa chỉ" />
+            <input class="btnSignUpnow" type="submit" name="submit" value="Đăng ký ngay" />
+            </form>
+        </div>
+    </div>
+
     <div class="wrapper">
     <div class="container">
     <div class="footer-content">
@@ -136,3 +153,117 @@ function renderFooter() {
 }
 
 renderFooter();
+
+// popup function
+const popupEl = document.querySelector(".bg-popup");
+function btnPopup() {
+  // Lấy giá trị của thuộc tính display được tính toán từ CSS
+  const computedStyle = window.getComputedStyle(popupEl);
+  const display = computedStyle.getPropertyValue("display");
+
+  // Kiểm tra xem nếu display là "none" thì hiển thị popup, ngược lại ẩn đi
+  if (display === "none") {
+    popupEl.style.display = "block";
+  } else {
+    popupEl.style.display = "none";
+  }
+}
+
+const formPopupEl = document.querySelector(".formPopup");
+formPopupEl.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let parentValue = formPopupEl.parent.value;
+  let phoneValue = formPopupEl.numberPhone.value;
+  let studentValue = formPopupEl.student.value;
+  let addressValue = formPopupEl.address.value;
+  let number = /[0-9]/g;
+  let lowercase = /[a-z]/g;
+  let uppercase = /[A-Z]/g;
+  let specialCharsRegex = /[^\w\s]/g;
+  function validate() {
+    if (
+      parentValue === "" ||
+      phoneValue.trim() === "" ||
+      studentValue === "" ||
+      addressValue === ""
+    ) {
+      alert("Vui lòng nhập đủ thông tin");
+      return false;
+    }
+
+    if (!phoneValue.match(number)) {
+      alert("Số điện thoại không được chứa chữ cái hoặc ký tự đặc biệt");
+      return false;
+    } else if (phoneValue.length < 9) {
+      alert("Số điện thoại phải có ít nhất là 9 số");
+      return false;
+    } else if (
+      phoneValue.match(lowercase) ||
+      phoneValue.match(uppercase) ||
+      phoneValue.match(specialCharsRegex)
+    ) {
+      let checkstr = [];
+      if (phoneValue.match(lowercase)) {
+        checkstr += [...phoneValue.match(lowercase)];
+      }
+      if (phoneValue.match(uppercase)) {
+        checkstr += [...phoneValue.match(uppercase)];
+      }
+      if (phoneValue.match(specialCharsRegex)) {
+        checkstr += [...phoneValue.match(specialCharsRegex)];
+      }
+
+      alert(
+        "Số điện thoại không được chứa chữ cái hoặc ký tự đặc biệt" +
+          "\n" +
+          "Vui lòng loại bỏ ký tự này: " +
+          `"` +
+          checkstr +
+          `"`
+      );
+      return false;
+    }
+
+    return true;
+  }
+
+  if (validate()) {
+    // Hàm để hiển thị thông báo
+    function showCustomAlert() {
+      var customAlert = document.getElementById("customAlert");
+      customAlert.style.display = "block";
+    }
+
+    // Hàm để ẩn đi thông báo
+    function hideCustomAlert() {
+      var customAlert = document.getElementById("customAlert");
+      customAlert.style.display = "none";
+    }
+
+    // Hiển thị thông báo khi cần
+    showCustomAlert();
+
+    // // Ẩn đi thông báo sau một khoảng thời gian (ví dụ: 3 giây)
+    // setTimeout(function () {
+    //   hideCustomAlert();
+    // }, 100); // 3 giây
+    setTimeout(function () {
+      hideCustomAlert();
+    }, 2500);
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbymH-OeBjwTAwUVtigNZNMMWA-VSbhpk5NmXXkDb40VUX4o3gYfDsimMaUuqV8tVRO58A/exec";
+
+    fetch(scriptURL, { method: "POST", body: new FormData(formPopupEl) })
+      .then((response) => {
+        formPopupEl.parent.value = "";
+        formPopupEl.numberPhone.value = "";
+        formPopupEl.student.value = "";
+        formPopupEl.address.value = "";
+
+        alert(
+          "Đăng ký thành công!!!" + "\n" + "Chúng tôi sẽ sớm liên hệ tới bạn"
+        );
+      })
+      .catch((error) => console.error("Error!", error.message));
+  }
+});

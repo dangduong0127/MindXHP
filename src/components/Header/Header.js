@@ -60,7 +60,7 @@ function renderHeader() {
         `;
     });
   });
-  navEl.innerHTML += `<input type="button" class="btn_nav_item" value="Đăng ký tư vấn" />`;
+  navEl.innerHTML += `<input type="button" class="btn_nav_item" onclick="btnPopup()" value="Đăng ký tư vấn" />`;
 
   const nav_item = document.querySelectorAll(".nav_item");
 

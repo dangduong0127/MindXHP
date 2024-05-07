@@ -11,31 +11,21 @@ export const navMenu = [
     submenu: [
       {
         id: "Robotics",
-        text: "Khoá học Robotics (6-12 tuổi)",
+        text: "Khoá học Robotics: Lắp ráp và chế tạo robot STEM (6 - 15 tuổi)",
         href: "./robotics.html",
       },
       {
         id: "Gamemaker",
-        text: "Khoá học lập trình Gamemaker (13-15 tuổi)",
+        text: "Khoá học lập trình: Sáng tạo và khởi nghiệp công nghệ (9 - 17 tuổi)",
         href: "./gamemaker.html",
       },
-      { id: "javascript", text: "Khoá học lập trình Web (15+)", href: "#" },
     ],
   },
 
   {
     name: "Tin tức",
     href: "#tintuc",
-    submenu: [
-      {
-        text: "Tin tuc 1",
-        href: "#",
-      },
-      {
-        text: "Tin tuc 2",
-        href: "#",
-      },
-    ],
+    submenu: [],
   },
 
   {
@@ -43,8 +33,12 @@ export const navMenu = [
     href: "#",
     submenu: [
       {
-        text: "Sự kiện Xcontest",
+        text: "Cuộc thi XContest",
         href: "#xcontest",
+      },
+      {
+        text: "Khai trương cơ sở Hải Phòng",
+        href: "#grandOpening",
       },
     ],
   },

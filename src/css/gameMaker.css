@@ -243,7 +243,9 @@
   background: #f8f8f8;
 }
 
-.carousel {
+#carouselOutput,
+#carouselExampleIndicator,
+#carouselFeedback {
   margin-top: 0px;
   padding: 0px 50px 0px 50px;
 }
@@ -270,6 +272,10 @@
 }
 
 /* css for feedback of Gamemaker */
+.carouselBeedback {
+  margin-top: 0px;
+  position: relative;
+}
 #carouselFeedback {
   margin: 0;
   padding: 0;
@@ -294,4 +300,37 @@
   background: #e31f26;
   padding: 5px 20px 5px 20px;
   border-radius: 7px;
+}
+#btnSignUpNow:focus {
+  outline: none;
+}
+/* css for signUp section */
+.SignUpSection {
+  padding: 30px 0px 30px;
+}
+.SignUpSection > .container {
+  position: relative;
+  background-image: url("../assets/asset-34x-2-20240315081351-xrzfd.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  border-radius: 10px;
+  height: 500px;
+  width: 900px;
+  box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.534);
+}
+.SignUpSection > .container > form {
+  position: absolute;
+  right: 200px;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.SignUpSection > .container > form > input {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+  border: none;
 }

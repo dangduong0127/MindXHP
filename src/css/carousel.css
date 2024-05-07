@@ -1,0 +1,119 @@
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  height: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* width: max-content; */
+  transition: 1s;
+}
+
+/* .list > img {
+  width: 1300px;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+} */
+.list > .item {
+  width: 100%;
+}
+.list > .item > iframe {
+  width: 1120px;
+  max-width: 100vw;
+  object-fit: cover;
+  height: 100%;
+}
+.buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons > button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f8f8f8;
+  color: black;
+  font-family: monospace;
+  font-weight: bold;
+}
+.buttons > button:focus {
+  outline: none;
+}
+.dots {
+  position: absolute;
+  bottom: 10px;
+  color: #fff;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.dots > li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 20px;
+  transition: 1s;
+}
+/* .active {
+  width: 30px;
+  color: black;
+} */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .slider {
+    height: 500px;
+  }
+  .list > .item > iframe {
+    width: 100vw;
+  }
+  .buttons {
+    left: 0;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 46.1875em) {
+  .slider {
+    height: 200px;
+  }
+
+  .list > .item > iframe {
+    width: 100vw;
+    object-fit: cover;
+    height: 100%;
+  }
+  .buttons {
+    left: 0;
+    width: 100%;
+  }
+  .buttons > button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f8f8f8;
+    color: black;
+    font-family: monospace;
+    font-weight: bold;
+  }
+}

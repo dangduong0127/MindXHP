@@ -57,9 +57,7 @@ window.onscroll = function () {
 
 // stop cacrousel products
 // $(".carousel").carousel("pause");
-$(".carousel").carousel({
-  interval: 5000,
-});
+$("#carouselFeedback").carousel("pause");
 
 function showSubProgram(id) {
   const showSubProgramEl = document.getElementById(id);

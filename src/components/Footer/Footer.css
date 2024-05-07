@@ -65,3 +65,83 @@ iframe {
   width: 100%;
   height: 100%;
 }
+
+/* css for popup*/
+.bg-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+.popup {
+  position: absolute;
+  background-image: url("../../assets/popup-coding4x-20240425101044-erd8f.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 800px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
+.popup > i {
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+.popup > form {
+  position: absolute;
+  right: 80px;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.popup > form > input {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+  border: none;
+}
+
+.btnSignUpnow {
+  text-transform: uppercase;
+  background-color: #ffff00;
+  color: rgb(227, 31, 38);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.534);
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.custom-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999999;
+}

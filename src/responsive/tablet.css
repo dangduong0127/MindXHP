@@ -24,10 +24,6 @@
     display: block;
   }
 
-  .carousel {
-    width: 90%;
-  }
-
   .card_header_item {
     display: grid;
     grid-template-columns: auto auto;
@@ -249,8 +245,9 @@
   #carouselOutput {
     margin: auto;
   }
-  .carousel {
-    padding: 0px 20px 0px 20px;
+
+  .output > .container > .carousel {
+    padding: 0px 20px 0px 20px !important;
   }
   .output-btn {
     position: absolute;
@@ -263,11 +260,30 @@
   .lecturer > .container > #carouselExampleIndicator {
     margin: auto;
   }
-
+  .lecturer > .container > .carousel {
+    padding: 0px !important;
+  }
   /* css for feedback of GameMaker */
   /* #carouselFeedback {
   } */
+  .feedbackOfParent > .container > .carousel {
+    padding: 0px !important;
+  }
   .feedback-btn {
     width: 40px !important;
+  }
+
+  /* css for signupForm of Gamemaker */
+  .SignUpSection > .container {
+    width: 100%;
+    padding: 0px 15px 0px 15px;
+  }
+
+  /* css for popup */
+  .popup {
+    width: 90% !important;
+  }
+  .popup > form {
+    right: 50px !important;
   }
 }

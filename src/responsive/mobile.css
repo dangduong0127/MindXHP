@@ -42,9 +42,7 @@
     width: 100%;
     object-fit: cover;
   }
-  .carousel {
-    width: 90%;
-  }
+
   .carousel-control-prev,
   .carousel-control-next {
     width: 50px;
@@ -87,7 +85,6 @@
   .course_heading {
     display: flex;
     align-content: center;
-    text-align: justify;
   }
   .course_heading > h1 {
     font-weight: bolder;
@@ -304,7 +301,7 @@
   }
   .corporate-video > iframe {
     top: 20px;
-    left: 40px;
+    left: 45px;
     height: 180px;
     width: 265px;
   }
@@ -374,6 +371,7 @@
   #carouselOutput {
     margin: auto;
     width: 100%;
+    padding: 0;
   }
   #carouselOutput > .carousel-inner {
     width: 100%;
@@ -381,7 +379,6 @@
   .output > .container > .carousel {
     padding: 0px;
   }
-
   #carouselOutput > .carousel-inner > .carousel-item > img {
     width: 100%;
   }
@@ -396,7 +393,7 @@
   /* css for mentor section */
   .lecturer > .container > #carouselExampleIndicator {
     width: 100%;
-    padding: 0;
+    padding: 0 !important;
   }
 
   #carouselExampleIndicator > .carousel-inner > .carousel-item > img {
@@ -404,6 +401,9 @@
   }
 
   /* css for feedback section of GMaker */
+  .feedbackOfParent > .container > .carousel {
+    padding: 0 !important;
+  }
   .feedback-btn {
     width: 20px !important;
   }
@@ -413,5 +413,23 @@
   }
   #myBtn {
     right: 5px;
+  }
+
+  /* css for signupForm of Gamemaker */
+  .SignUpSection {
+    margin-top: 20px;
+  }
+  .SignUpSection > .container {
+    width: 100%;
+    height: 300px;
+  }
+
+  /* css for popup */
+  .popup {
+    width: 100% !important;
+    height: 500px !important;
+  }
+  .popup > form {
+    right: 25px !important;
   }
 }

@@ -137,6 +137,9 @@
   padding: 5px 20px 5px 20px;
   border-radius: 7px;
 }
+#btnSignUpNow:focus {
+  outline: none;
+}
 .end-suitable-heading {
   margin-top: 40px;
 }
@@ -253,6 +256,9 @@
   color: #fff;
   border-radius: 7px;
   cursor: pointer;
+}
+.btn > .btnSignUp:focus {
+  outline: none;
 }
 /* <!-- highlight section --> */
 .highlight {
@@ -395,6 +401,7 @@
   border-radius: 5px;
   cursor: pointer;
   animation: pulse 1.5s infinite alternate;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.505);
 }
 
 @keyframes pulse {
