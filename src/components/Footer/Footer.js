@@ -180,6 +180,8 @@ formPopupEl.addEventListener("submit", function (e) {
   let lowercase = /[a-z]/g;
   let uppercase = /[A-Z]/g;
   let specialCharsRegex = /[^\w\s]/g;
+  let vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+
   function validate() {
     if (
       parentValue === "" ||
@@ -191,38 +193,42 @@ formPopupEl.addEventListener("submit", function (e) {
       return false;
     }
 
-    if (!phoneValue.match(number)) {
-      alert("Số điện thoại không được chứa chữ cái hoặc ký tự đặc biệt");
-      return false;
-    } else if (phoneValue.length < 9) {
-      alert("Số điện thoại phải có ít nhất là 9 số");
-      return false;
-    } else if (
-      phoneValue.match(lowercase) ||
-      phoneValue.match(uppercase) ||
-      phoneValue.match(specialCharsRegex)
-    ) {
-      let checkstr = [];
-      if (phoneValue.match(lowercase)) {
-        checkstr += [...phoneValue.match(lowercase)];
-      }
-      if (phoneValue.match(uppercase)) {
-        checkstr += [...phoneValue.match(uppercase)];
-      }
-      if (phoneValue.match(specialCharsRegex)) {
-        checkstr += [...phoneValue.match(specialCharsRegex)];
-      }
-
-      alert(
-        "Số điện thoại không được chứa chữ cái hoặc ký tự đặc biệt" +
-          "\n" +
-          "Vui lòng loại bỏ ký tự này: " +
-          `"` +
-          checkstr +
-          `"`
-      );
+    if (!phoneValue.match(vnf_regex)) {
+      alert("Số điện thoại không đúng định dạng!!!" + "\n" + "Ví dụ: 0988...");
       return false;
     }
+    // if (!phoneValue.match(number)) {
+    //   alert("Số điện thoại không được chứa chữ cái hoặc ký tự đặc biệt");
+    //   return false;
+    // } else if (phoneValue.length < 9) {
+    //   alert("Số điện thoại phải có ít nhất là 9 số");
+    //   return false;
+    // } else if (
+    //   phoneValue.match(lowercase) ||
+    //   phoneValue.match(uppercase) ||
+    //   phoneValue.match(specialCharsRegex)
+    // ) {
+    //   let checkstr = [];
+    //   if (phoneValue.match(lowercase)) {
+    //     checkstr += [...phoneValue.match(lowercase)];
+    //   }
+    //   if (phoneValue.match(uppercase)) {
+    //     checkstr += [...phoneValue.match(uppercase)];
+    //   }
+    //   if (phoneValue.match(specialCharsRegex)) {
+    //     checkstr += [...phoneValue.match(specialCharsRegex)];
+    //   }
+
+    //   alert(
+    //     "Số điện thoại không được chứa chữ cái hoặc ký tự đặc biệt" +
+    //       "\n" +
+    //       "Vui lòng loại bỏ ký tự này: " +
+    //       `"` +
+    //       checkstr +
+    //       `"`
+    //   );
+    //   return false;
+    // }
 
     return true;
   }
