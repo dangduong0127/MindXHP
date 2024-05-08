@@ -78,3 +78,116 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+const formCodingEl = document.querySelector(".formCoding");
+formCodingEl.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let parentValue = formCodingEl.parent.value;
+  let phoneValue = formCodingEl.numberPhone.value;
+  let studentValue = formCodingEl.student.value;
+  let addressValue = formCodingEl.address.value;
+  let number = /[0-9]/g;
+  let lowercase = /[a-z]/g;
+  let uppercase = /[A-Z]/g;
+  let specialCharsRegex = /[^\w\s]/g;
+  function validate() {
+    if (
+      parentValue === "" ||
+      phoneValue.trim() === "" ||
+      studentValue === "" ||
+      addressValue === ""
+    ) {
+      alert("Vui lòng nhập đủ thông tin");
+      return false;
+    }
+
+    if (!phoneValue.match(number)) {
+      alert("Số điện thoại không được chứa chữ cái hoặc ký tự đặc biệt");
+      return false;
+    } else if (phoneValue.length < 9) {
+      alert("Số điện thoại phải có ít nhất là 9 số");
+      return false;
+    } else if (
+      phoneValue.match(lowercase) ||
+      phoneValue.match(uppercase) ||
+      phoneValue.match(specialCharsRegex)
+    ) {
+      let checkstr = [];
+      if (phoneValue.match(lowercase)) {
+        checkstr += [...phoneValue.match(lowercase)];
+      }
+      if (phoneValue.match(uppercase)) {
+        checkstr += [...phoneValue.match(uppercase)];
+      }
+      if (phoneValue.match(specialCharsRegex)) {
+        checkstr += [...phoneValue.match(specialCharsRegex)];
+      }
+
+      alert(
+        "Số điện thoại không được chứa chữ cái hoặc ký tự đặc biệt" +
+          "\n" +
+          "Vui lòng loại bỏ ký tự này: " +
+          `"` +
+          checkstr +
+          `"`
+      );
+      return false;
+    }
+
+    return true;
+  }
+
+  if (validate()) {
+    // Hàm để hiển thị thông báo
+    function showCustomAlert() {
+      var customAlert = document.getElementById("customAlert");
+      customAlert.style.display = "block";
+    }
+
+    // Hàm để ẩn đi thông báo
+    function hideCustomAlert() {
+      var customAlert = document.getElementById("customAlert");
+      customAlert.style.display = "none";
+    }
+
+    // Hiển thị thông báo khi cần
+    showCustomAlert();
+
+    // // Ẩn đi thông báo sau một khoảng thời gian
+    setTimeout(function () {
+      hideCustomAlert();
+    }, 2500);
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbymH-OeBjwTAwUVtigNZNMMWA-VSbhpk5NmXXkDb40VUX4o3gYfDsimMaUuqV8tVRO58A/exec";
+    let formData = new FormData(formCodingEl);
+    let getTime = new Date();
+    let years = getTime.getFullYear();
+    let months = getTime.getMonth();
+    let days = getTime.getDay();
+    let hours = getTime.getHours();
+    let minutes = getTime.getMinutes();
+    months = months < 10 ? "0" + months : months;
+    days = days < 10 ? "0" + days : days;
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    let creatAt = days + "/" + months + "/" + years;
+    let timeCreat = hours + ":" + minutes;
+
+    formData.append("creatAt", creatAt);
+    formData.append("time", timeCreat);
+    formData.append("status", "Chưa xử lý");
+
+    fetch(scriptURL, { method: "POST", body: formData })
+      .then((response) => {
+        formCodingEl.parent.value = "";
+        formCodingEl.numberPhone.value = "";
+        formCodingEl.student.value = "";
+        formCodingEl.address.value = "";
+
+        alert(
+          "Đăng ký thành công!!!" + "\n" + "Chúng tôi sẽ sớm liên hệ tới bạn"
+        );
+      })
+      .catch((error) => console.error("Error!", error.message));
+  }
+});

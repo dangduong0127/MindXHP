@@ -256,10 +256,10 @@ formPopupEl.addEventListener("submit", function (e) {
     let days = getTime.getDay();
     let hours = getTime.getHours();
     let minutes = getTime.getMinutes();
-    months < 10 ? "0" + months : months;
-    days < 10 ? "0" + days : days;
-    hours < 10 ? "0" + hours : hours;
-    minutes < 10 ? "0" + minutes : minutes;
+    months = months < 10 ? "0" + months : months;
+    days = days < 10 ? "0" + days : days;
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
     let creatAt = days + "/" + months + "/" + years;
     let timeCreat = hours + ":" + minutes;
 
