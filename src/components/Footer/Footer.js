@@ -243,17 +243,31 @@ formPopupEl.addEventListener("submit", function (e) {
     // Hiển thị thông báo khi cần
     showCustomAlert();
 
-    // // Ẩn đi thông báo sau một khoảng thời gian (ví dụ: 3 giây)
-    // setTimeout(function () {
-    //   hideCustomAlert();
-    // }, 100); // 3 giây
+    // // Ẩn đi thông báo sau một khoảng thời gian
     setTimeout(function () {
       hideCustomAlert();
     }, 2500);
     const scriptURL =
       "https://script.google.com/macros/s/AKfycbymH-OeBjwTAwUVtigNZNMMWA-VSbhpk5NmXXkDb40VUX4o3gYfDsimMaUuqV8tVRO58A/exec";
+    let formData = new FormData(formPopupEl);
+    let getTime = new Date();
+    let years = getTime.getFullYear();
+    let months = getTime.getMonth();
+    let days = getTime.getDay();
+    let hours = getTime.getHours();
+    let minutes = getTime.getMinutes();
+    months < 10 ? "0" + months : months;
+    days < 10 ? "0" + days : days;
+    hours < 10 ? "0" + hours : hours;
+    minutes < 10 ? "0" + minutes : minutes;
+    let creatAt = days + "/" + months + "/" + years;
+    let timeCreat = hours + ":" + minutes;
 
-    fetch(scriptURL, { method: "POST", body: new FormData(formPopupEl) })
+    formData.append("creatAt", creatAt);
+    formData.append("time", timeCreat);
+    formData.append("status", "Chưa xử lý");
+
+    fetch(scriptURL, { method: "POST", body: formData })
       .then((response) => {
         formPopupEl.parent.value = "";
         formPopupEl.numberPhone.value = "";
