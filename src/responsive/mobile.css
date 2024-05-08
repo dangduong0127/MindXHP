@@ -38,6 +38,20 @@
     margin-right: 20px;
   }
 
+  .card_header_container {
+    padding: 40px 40px 20px 40px;
+    margin: 0;
+  }
+  .card_header_item {
+    width: 100%;
+  }
+  .single_card_header > h2 {
+    font-size: 32px;
+  }
+
+  .card_header_item > .single_card_header {
+    padding: 0;
+  }
   .carousel-item > img {
     width: 100%;
     object-fit: cover;

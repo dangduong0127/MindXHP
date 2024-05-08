@@ -17,7 +17,7 @@ export const navMenu = [
       {
         id: "Gamemaker",
         text: "Khoá học lập trình: Sáng tạo và khởi nghiệp công nghệ (9 - 17 tuổi)",
-        href: "./gamemaker.html",
+        href: "./coding.html",
       },
     ],
   },
@@ -68,6 +68,32 @@ export const courses = [
     thumbnail: "",
     title:
       "Khóa học Web developer: Xây dựng và phát triển kỹ năng lập trình web",
+  },
+];
+
+export const studentsTalent = [
+  {
+    img: "./src/assets/students/ducnam.PNG",
+    name: "Nguyễn Đức Nam",
+    decription: "Giải nhất sản phẩm cuối khóa lớp HP-JSA03-HB",
+  },
+
+  {
+    img: "./src/assets/students/ngocthach.PNG",
+    name: "Nguyễn Ngọc Thạch",
+    decription: "Giải nhất cuộc thi XContest tháng 9/2023",
+  },
+
+  {
+    img: "./src/assets/students/longtan.PNG",
+    name: "Nguyễn Long Tân",
+    decription: "Giải nhất sản phẩm cuối khóa lớp HP-SA01",
+  },
+
+  {
+    img: "./src/assets/students/nhatnam.PNG",
+    name: "Nhật Nam",
+    decription: "Giải nhất sản phẩm cuối khóa lớp HP-ROB-SEMIB01",
   },
 ];
 
