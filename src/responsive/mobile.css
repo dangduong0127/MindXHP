@@ -389,12 +389,14 @@
   }
   #carouselOutput > .carousel-inner {
     width: 100%;
+    border-radius: 10px;
   }
   .output > .container > .carousel {
     padding: 0px;
   }
   #carouselOutput > .carousel-inner > .carousel-item > img {
     width: 100%;
+    height: 220px;
   }
   .output-btn {
     position: absolute;
@@ -420,6 +422,9 @@
   }
   .feedback-btn {
     width: 20px !important;
+  }
+  #carouselFeedback > .carousel-inner {
+    padding: 0px;
   }
   #carouselFeedback > .carousel-inner > .carousel-item > iframe {
     width: 100%;
