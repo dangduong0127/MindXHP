@@ -24,7 +24,7 @@ export const navMenu = [
 
   {
     name: "Tin tức",
-    href: "#tintuc",
+    href: "./blog.html",
     submenu: [],
   },
 
@@ -44,7 +44,7 @@ export const navMenu = [
   },
   {
     name: "Về chúng tôi",
-    href: "#",
+    href: "./about.html",
     submenu: [],
   },
 ];
