@@ -4,7 +4,7 @@ function importCSS(url) {
   link.href = url;
   document.head.appendChild(link);
 }
-importCSS("src/components/Footer/Footer.css");
+importCSS("./src/components/Footer/Footer.css");
 
 function renderFooter() {
   const footer = document.createElement("footer");
@@ -156,6 +156,7 @@ renderFooter();
 
 // popup function
 const popupEl = document.querySelector(".bg-popup");
+console.log(popupEl);
 function btnPopup() {
   // Lấy giá trị của thuộc tính display được tính toán từ CSS
   const computedStyle = window.getComputedStyle(popupEl);
@@ -197,38 +198,6 @@ formPopupEl.addEventListener("submit", function (e) {
       alert("Số điện thoại không đúng định dạng!!!" + "\n" + "Ví dụ: 0988...");
       return false;
     }
-    // if (!phoneValue.match(number)) {
-    //   alert("Số điện thoại không được chứa chữ cái hoặc ký tự đặc biệt");
-    //   return false;
-    // } else if (phoneValue.length < 9) {
-    //   alert("Số điện thoại phải có ít nhất là 9 số");
-    //   return false;
-    // } else if (
-    //   phoneValue.match(lowercase) ||
-    //   phoneValue.match(uppercase) ||
-    //   phoneValue.match(specialCharsRegex)
-    // ) {
-    //   let checkstr = [];
-    //   if (phoneValue.match(lowercase)) {
-    //     checkstr += [...phoneValue.match(lowercase)];
-    //   }
-    //   if (phoneValue.match(uppercase)) {
-    //     checkstr += [...phoneValue.match(uppercase)];
-    //   }
-    //   if (phoneValue.match(specialCharsRegex)) {
-    //     checkstr += [...phoneValue.match(specialCharsRegex)];
-    //   }
-
-    //   alert(
-    //     "Số điện thoại không được chứa chữ cái hoặc ký tự đặc biệt" +
-    //       "\n" +
-    //       "Vui lòng loại bỏ ký tự này: " +
-    //       `"` +
-    //       checkstr +
-    //       `"`
-    //   );
-    //   return false;
-    // }
 
     return true;
   }
@@ -289,7 +258,7 @@ formPopupEl.addEventListener("submit", function (e) {
 });
 
 // Get the button:
-let mybutton = document.getElementById("myBtn");
+const mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {

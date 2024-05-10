@@ -170,7 +170,9 @@
     flex-direction: column;
     text-align: justify;
   }
-
+  .tongquan {
+    font-size: 18px;
+  }
   .img-tongquan > img {
     width: 100%;
     border-radius: 10px;
@@ -179,11 +181,16 @@
   .pagragh {
     width: 90%;
   }
+  .program-heading > h2 {
+    font-size: 20px;
+  }
   .wapper-program-routemap {
     width: 90%;
   }
   /* Css for reason section */
-
+  .reason-heading > h2 {
+    font-size: 20px !important;
+  }
   .reason-content-wapper {
     display: grid;
     justify-content: center;
@@ -195,6 +202,9 @@
     justify-content: center;
   }
 
+  .hightlight-heading > h2 {
+    font-size: 20px !important;
+  }
   .highlight-content {
     display: grid;
     grid-template-columns: auto;
@@ -206,10 +216,17 @@
   .highlight-content > .corporate-video {
     margin: auto;
   }
+  /* css for product section of Rob */
+  .products-heading > h2 {
+    font-size: 20px;
+  }
 
   /* css for mentor */
   .mentor > .container {
     padding: 0px 60px 0px 60px;
+  }
+  .mentor-heading > h2 {
+    font-size: 20px;
   }
   .mentor-wrapper {
     display: grid;
@@ -224,6 +241,16 @@
   /* suitable section of GameMaker */
   .suitable-content {
     grid-gap: 10px;
+  }
+  .suitable-heading > h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .end-suitable-heading {
+    margin-top: 20px;
+  }
+  .end-suitable-heading > h2 {
+    font-size: 20px;
   }
   .suitable-inner {
     padding: 20px;
@@ -292,5 +319,9 @@
   }
   .popup > form {
     right: 50px !important;
+  }
+  #btnSignUpNow {
+    font-weight: normal;
+    font-size: 20px;
   }
 }

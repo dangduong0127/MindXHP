@@ -1,8 +1,5 @@
 const ladiEl = document.querySelector(".ladi-container");
 
-// Get the button:
-let mybutton = document.getElementById("myBtn");
-
 // Hàm kiểm tra xem thiết bị có phải là loại gì
 function checkDeviceType() {
   // Kiểm tra kích thước màn hình và userAgent để xác định loại thiết bị

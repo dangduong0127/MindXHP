@@ -2772,3 +2772,7 @@ nextjs-portal {
   font-family: __Exo_1e998c, __Exo_Fallback_1e998c;
   font-style: normal;
 }
+
+.branding-contact {
+  display: flex;
+}
